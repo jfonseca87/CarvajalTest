@@ -1,0 +1,12 @@
+<div class="contenedor-principal">
+    <div>
+        <h1>Triqui Game</h1>
+    </div>
+    <div class="div-boton">
+        <button class="botonNuevo" (click)="nuevoJuego()"> Nuevo Juego </button>
+    </div>
+    <div class="contenedortablero">
+        <app-cuadro *ngFor="let pos of posiciones; let i = index" [valor]="pos" [finJuego]="finJuego"
+            (click)="hacerJugada(i)"></app-cuadro>
+    </div>
+</div>
